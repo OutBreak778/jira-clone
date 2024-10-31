@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.rbc-month-row {
+    @apply min-h-[180px] border-t border-x-2
+}
+.rbc-header {
+    @apply text-sm font-normal pb-4 pt-2 text-muted-foreground
+}
+
+.rbc-button-link {
+    @apply text-xs font-normal text-muted-foreground 
+}
+
+.rbc-header + .rbc-header {
+    @apply border-l-2
+}
+
+:not(.rbc-month-row ~ .rbc-month-row).rbc-month-row {
+    @apply rounded-t-xl
+}
+
+.rbc-month-row:last-of-type {
+    @apply border-b rounded-b-xl
+}
+
+.rbc-month-view {
+    @apply border-none mt-3
+}
+
+.rbc-date-cell {
+    @apply px-3
+}
+
+.rbc-today {
+    background: rgb(230, 230, 230);
+    font: white;
+}
+
+.rbc-off-range-bg {
+    background-color: inherit;
+}
